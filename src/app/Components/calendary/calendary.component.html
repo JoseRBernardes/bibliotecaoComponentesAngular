@@ -1,0 +1,71 @@
+<!-- <div class="schedulingContainer"> -->
+
+
+    <div class="calendary">
+        <div class="calendaryDisplay">
+            <div class="HeaderCalendary">
+                <h4>{{convertDateStringMonthYear(monthSet)}}</h4>
+                <span class="nextPreviousBox"><span (click)="changeMonth(false)"> < </span> <span (click)="changeMonth(true)">&emsp;></span></span>
+            </div>
+            <div class="calendaryBody">
+                <div class="HeaderWeekBox">    
+                    <div class="calendaryItemHeader">
+                        <span>Dom</span>
+                    </div>
+                    
+                    <div class="calendaryItemHeader">
+                        <span>Seg</span>
+                    </div>
+
+                    <div class="calendaryItemHeader">
+                        <span>Ter</span>
+                    </div>
+
+                    <div class="calendaryItemHeader">
+                        <span>Qua</span>
+                    </div>
+
+                    <div class="calendaryItemHeader">
+                        <span>Qui</span>
+                    </div>
+                
+                    <div class="calendaryItemHeader">
+                        <span>Sex</span>
+                    </div>
+
+                    <div class="calendaryItemHeader">
+                        <span>Sab</span>
+                    </div>
+                </div>
+
+                <ng-container *ngFor="let day of calendary">
+                    <div class="calendaryItem" *ngIf="day.FlAtivo;else EmptyDay">
+                        <span  (click)="openCloseTimeTable()" class="today" *ngIf="isToday(day.Date);else otherDays">{{day.Date.getDate()}}</span>
+                        <ng-template #otherDays>
+                            <span (click)="openCloseTimeTable()">{{day.Date.getDate()}}</span>
+                        </ng-template>
+                    </div>
+                    <ng-template #EmptyDay>
+                        <div class="calendaryItem">
+                            <span class="transparent">XX</span>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </div>
+    </div>
+
+
+    <div ngClass="{{visible}}" class="schedulingFormBox" >
+        <h4 class="schedulingFormExitBox"><span (click)="openCloseTimeTable()" class="schedulingFormExit">X</span></h4>
+        <div class="schedulingForm">
+            <ng-container *ngFor="let time of timeTable">
+                <div  class="timeTableOption">
+                    {{time}}
+                </div>
+            </ng-container>
+            
+        </div>
+    </div>
+
+
+<!-- </div> -->

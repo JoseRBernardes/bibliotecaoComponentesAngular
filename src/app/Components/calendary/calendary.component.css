@@ -1,0 +1,161 @@
+.calendary{
+    display: block;
+    font-family:verdana;
+    position: relative;
+    width: 24em;
+    padding: 1em;
+}
+.calendaryDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1em;
+    padding-left: 1em;
+    width: 22em;
+    background-color: #effff9;
+}
+
+.HeaderCalendary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #15BA7E;
+    width: 100%;
+    padding: 1em;
+    border-top-right-radius: .5em;
+    border-top-left-radius: .5em;
+    color: white;
+}
+
+.nextPreviousBox{
+    font-weight: bolder;
+    font-size: 1.3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: font-size 1s;
+}
+
+.nextPreviousBox:hover{
+    font-size: 1.5em;
+}
+
+.calendaryBody{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    width: 22.4em;
+    justify-content: flex-start;
+    
+}
+
+.HeaderWeekBox{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px #15BA7E;
+    margin-bottom: 1em;
+}
+
+.calendaryItemHeader{
+    display: block;
+    width: 3em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: .3em;
+    margin: .1em;
+}
+
+.calendaryItem{
+    width: 3em;
+    padding-bottom: .5em;
+    padding-top:.5em;
+    margin: .1em;
+    text-align: center;
+    color: black;
+    cursor:pointer;
+    border-radius: .2em;
+}
+
+.transparent{
+    color: transparent;
+   
+}
+
+.today{
+    background-color: #15BA7E;
+    color: white;
+    padding: .5em;
+    border-radius: 3em;
+}
+
+.schedulingFormBox{
+    display: block;
+    background-color: #effff9;
+    padding: 1em;
+    position: absolute;
+    width: 22em;
+    top:0;
+    margin-top: 4em;
+  
+}
+
+.schedulingForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+    justify-content: center;
+}
+
+.timeTableOption{
+    margin: .2em;
+    padding-top: 1.1em;
+    padding-bottom: 1.1em;
+    padding-left: .5em;
+    padding-right: .5em;
+    background-color: #15BA7E;
+    border-radius: .5em;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.timeTableOption:hover{
+    background-color: #effff9;
+    color: #15BA7E;
+}
+
+
+
+.schedulingFormExitBox{
+   display: flex;
+   justify-content: flex-end;
+   padding: .5em;
+   margin-top: -.5em;
+}
+
+.schedulingFormExit{
+    color: red;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding-right: .5em;
+    padding-left: .5em;
+    border-radius: .3em;
+}
+
+.schedulingFormExit:hover{
+    background-color: white;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
